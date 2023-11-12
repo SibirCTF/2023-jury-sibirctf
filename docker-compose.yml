@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  sibirctf2023_jury:
+    build:
+      context: .
+    container_name: sibirctf2023_jury1
+    # image: sea5kg/ctf01d:v0.5.2
+    volumes:
+      - "./data:/usr/share/ctf01d"
+    environment:
+      CTF01D_WORKDIR: "/usr/share/ctf01d"
+    ports:
+      - "80:8081"
+    restart: always
+    networks:
+      - sibirctf2023_jury
+
+networks:
+  sibirctf2023_jury:
+    driver: bridge

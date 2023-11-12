@@ -1,0 +1,6 @@
+__pycache__
+/data/hv_logs/
+/data/logs/
+/data/db/
+/data/checker_south_park_chat/flags/*.json
+/data/checker_stick_market/test.zip

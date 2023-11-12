@@ -1,0 +1,763 @@
+body{
+    background-color: #000;
+    font: 12pt/10pt Arial;
+    color: #999;
+    padding: 0px;
+    margin: 0px;
+    background-color: #202020;
+    color: #aaa;
+}
+
+body,html{
+    height: 100%;
+    text-align: center;
+}
+
+.game-name{
+    font-size: 40px;
+    padding-top: 40px;
+    height: 40px;
+}
+
+.ctf01d-tabs {
+  display: block;
+  border-bottom: 1px solid #aaa;
+  padding-top: 20px;
+}
+
+.ctf01d-tab {
+  display: inline-block;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: bold;
+  background-color: #202020;
+  cursor: pointer;
+  margin-bottom: -1px;
+}
+
+.ctf01d-tab.active {
+  margin-bottom: -1px;
+  border-bottom: 1px solid #202020;
+}
+
+.ctf01d-tab-content {
+  display: none;
+}
+
+input, select {
+  margin: 5px;
+  background-color: #000;
+  border: none;
+  color: #aaa;
+  padding: 5px;
+}
+
+
+button {
+    background-color: #202020;
+    color: #aaa;
+    border: 1px solid #aaa;
+    cursor: pointer;
+}
+
+.d-icn {
+    width: 20px;
+    height: 20px;
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.d-icn.att {
+  background-image: url("../images/attack.svg");
+}
+
+.d-icn.sla {
+  background-image: url("../images/sla.svg");
+}
+
+.game-description{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.game-time-range {
+    display: inline-block;
+}
+
+.team-name{
+  font-size: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.team-ip{
+	font-size: 10px;
+}
+
+#scoreboard_content {
+  display: block;
+  position: relative;
+}
+
+#table_scoreboard {
+  width: 100%;
+  position: relative;
+}
+
+.hdrs {
+  border-bottom: 1px solid #444;
+  height: 85px;
+  position: absolute;
+  padding-top: 15px;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.tm {
+  /*-ms-transition: top 1.2s;
+  -moz-transition: top 1.2s;
+  -webkit-transition: top 1.2s;
+  -o-transition: top 1.2s;
+  transition: top 1.2s;*/
+  height: 50px;
+  border-bottom: 1px solid #444;
+  padding-top: 15px;
+  position: absolute;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.place {
+  display: inline-block;
+  font-size: 25px;
+  width: 50px;
+  text-align: center;
+  height: 50px;
+  vertical-align: top;
+  line-height: 50px;
+  padding-left: 50px;
+  background-position: 0px 0px;
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+}
+
+.place-1st {
+  background-image: url("../images/states/place-1st.svg");
+}
+
+.place-2st {
+  background-image: url("../images/states/place-2st.svg");
+}
+
+.place-3st {
+  background-image: url("../images/states/place-3st.svg");
+}
+
+.team-logo {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  vertical-align: top;
+}
+
+.text {
+  display: inline-block;
+}
+
+.text.red {
+  color: #cc5914;
+  font-weight: bold;
+}
+
+.text.green {
+  color: #00b100;
+  font-weight: bold;
+}
+
+img.team-logo {
+  width: 40px;
+	height: 40px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.team {
+  display: inline-block;
+  height: 50px;
+  vertical-align: top;
+  width: 150px;
+  line-height: 25px;
+  overflow: hidden;
+}
+
+.hdrs .team {
+  line-height: 50px;
+}
+
+.score {
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+  text-align: center;
+  width: 100px;
+  line-height: 50px;
+  border-left: 1px solid #444;
+}
+
+.score .hdr-text {
+  display: inline-block;
+  height: 50px;
+  background-image: url("../images/points.svg");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  line-height: 20px;
+}
+
+.service {
+  display: inline-block;
+  height: 50px;
+  vertical-align: top;
+  width: 180px;
+  line-height: 25px;
+  border-left: 1px solid #444;
+  padding-left: 10px;
+  padding-right: 5px;
+  text-align: center;
+}
+
+.hdrs .service {
+  height: 100px;
+  line-height: 20px;
+  width: 185px;
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+.hdrs .service .service-att-def {
+  padding-left: 20px;
+  width: 200px;
+  max-width: 200px;
+}
+
+.first-blood {
+  display: inline-block;
+  height: 20px;
+  background-image: url("../images/first-blood.svg");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  padding-left: 25px;
+}
+
+@keyframes blinker {
+  from { visibility: visible }
+  to { visibility: hidden }
+
+  /* Alternatively you can do this:
+  0% { visibility: visible; }
+  50% { visibility: hidden; }
+  100% { visibility: visible; }
+  if you don't want to use `alternate` */
+}
+
+.points-sum {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.points-trend {
+  display: inline-block;
+  font-size: 10px;
+  line-height: 10px;
+  width: 20px;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  padding-top: 20px;
+}
+
+.points-trend.trend-up {
+  background-image: url("../images/trend-up.svg");
+}
+
+.points-trend.trend-down {
+  background-image: url("../images/trend-down.svg");
+}
+
+.points-trend.trend-middle {
+  background-image: url("../images/trend-middle.svg");
+}
+
+.points {
+  display: inline-block;
+  height: 20px;
+  background-image: url("../images/points.svg");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-right: 25px;
+  line-height: 20px;
+}
+
+.activity {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  width: 150px;
+  line-height: 25px;
+  border-left: 1px solid #444;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.activity .activity-value {
+  display: inline-block;
+}
+
+.hdrs-time {
+  height: 24px;
+  background-color: #333;
+  line-height: 20px;
+  top: 88px;
+  border-radius: 20px;
+  position: absolute;
+  width: calc(100% - 200px);
+  margin-left: 100px;
+  margin-right: 100px;
+  border-top: 2px solid #444;
+  border-bottom: 2px solid #0c1d07;
+  /*background-image: url( "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath d='M10 10h123v123H10z'/%3E%3C/svg%3E");
+  background-size: 70% 70px;
+  background-repeat: no-repeat;
+  background-position: 0px -10px;*/
+}
+
+.hdrs-time-fill {
+  display: block;
+  background-color: #193112;
+  height: 20px;
+  border-radius: 20px;
+  position: absolute;
+  width: 50%;
+  z-index: 100;
+  border-top: 2px solid #2a3d24;
+  border-bottom: 2px solid #112909;
+  border-right: 5px solid #706518;
+}
+
+.hdrs-time-game-current-time {
+  position: absolute;
+  text-align: center;
+  display: block;
+  width: 100%;
+  z-index: 2000;
+  color: #b7b076;
+}
+
+@keyframes fastblinking {
+  0% {
+    transform: scale(1.0);
+  }
+  20% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.0);
+  }
+}
+
+@keyframes blinking {
+  0% {
+    transform: scale(1.0);
+  }
+  20% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.0);
+  }
+  75% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+}
+
+.activity .activity-icon {
+  display: inline-block;
+  background-image: url(../images/activity.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.service-status {
+  display: inline-block;
+  height: 50px;
+  padding-left: 52px;
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  vertical-align: middle;
+}
+
+.service-status.down {
+	background-image: url("../images/states/down.svg");
+}
+
+.service-status.corrupt {
+	background-image: url("../images/states/corrupt.svg");
+}
+
+.service-status.mumble {
+	background-image: url("../images/states/mumble.svg");
+}
+
+.service-status.up {
+	background-image: url("../images/states/up.svg");
+}
+
+.service-status.shit {
+	background-image: url("../images/states/shit.svg");
+}
+
+.service-status.wait {
+	background-image: url("../images/states/wait.svg");
+}
+
+.service-status.coffeebreak {
+	background-image: url("../images/states/coffeebreak.svg");
+}
+
+.service-sla {
+  height: 25px;
+  line-height: 25px;
+}
+
+.service-att-def {
+  display: inline-table;
+  height: 25px;
+  line-height: 25px;
+  margin: 0px;
+  padding: 0px;
+  max-width: 150px;
+  width: 150px;
+  table-layout: fixed
+}
+
+.service-att-def-row {
+  display: table-row;
+}
+
+.service-att-def-cell {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 22px;
+  padding-top: 2px;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  font-size: 12px;
+  font-weight: bold;
+  background-position: 0px 2px;
+}
+
+.service-att-def-cell.defence-points {
+  color: #ffe600;
+  background-image: url("../images/defence-points.svg");
+}
+
+.service-att-def-cell.defence-flags {
+  color: #00b100;
+  background-image: url("../images/defence-flags.svg");
+}
+
+.service-att-def-cell.attack-points {
+  color: #ff6700;
+  background-image: url("../images/attack-points.svg");
+}
+
+.service-att-def-cell.round-time {
+  color: #8f8e8d;
+  background-image: url("../images/round-time.svg");
+}
+
+.service-att-def-cell.first-blood {
+  color: #971716;
+  background-image: url("../images/first-blood.svg");
+}
+
+.service-att-def-cell.sla {
+  color: #9cb9ea;
+  background-image: url("../images/sla.svg");
+}
+
+.service-att-def-cell.stollen-flags {
+  color: #cc5914;
+  background-image: url("../images/attack.svg");
+}
+
+/*
+.service-att-def .att {
+  color: #cc5914;
+  width: auto;
+  font-weight: bold;
+  padding-right: 20px;
+  background-position: right center;
+}
+
+.service-att-def .def {
+  width: auto;
+  color: #00b100;
+  font-weight: bold;
+  padding-left: 20px;
+}
+*/
+
+.service-sla {
+  padding-left: 25px;
+  width: 100%;
+  text-align: left;
+  color: white;
+  font-weight: bold;
+}
+
+/* loader */
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 6px;
+  width: 13px;
+  background: #fff;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 6px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 26px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 45px;
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 6px;
+    height: 51px;
+  }
+  50%, 100% {
+    top: 19px;
+    height: 26px;
+  }
+}
+
+.legend {
+  width: 50px !important;
+  height: 50px !important;
+  border: 1px solid #aaa;
+  padding: 0px;
+}
+
+.pre-flag-format {
+  display: block;
+  text-align: left;
+}
+
+.mass-action {
+  display: block;
+  width: 10%;
+  height: 10%;
+  top: 0px;
+  /*background-color: rgba(0, 0, 0, 0.5);*/
+  z-index: 2000;
+  position: fixed;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.45;
+  animation: mass-action-anim 1.2s cubic-bezier(0, 0.3, 0.6, 1.0) infinite;
+}
+
+.mass-action-automatization {
+  background-image: url("../images/actions/automatization.svg");
+  animation: mass-action-anim 1.2s cubic-bezier(0, 0.3, 0.6, 1.0) infinite;
+}
+
+
+
+@keyframes mass-action-anim {
+  0% {
+    opacity: 0.0;
+    background-size: 50%;
+    -ms-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  50% {
+    opacity: 0.5;
+    background-size: 45%;
+    -ms-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+  100%  {
+    opacity: 0.0;
+    background-size: 50%;
+    -ms-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+}
+
+.mass-action-firstblood {
+  background-image: url("../images/actions/firstblood.svg");
+  animation: mass-action-first-blood 5.2s cubic-bezier(0, 0.6, 0.7, 1.0) infinite;
+}
+
+@keyframes mass-action-first-blood {
+  0% {
+    opacity: 0.0;
+    background-size: 10%;
+    -ms-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    top: 0px;
+    width: 0%;
+    height: 0%;
+  }
+  50% {
+    opacity: 1.0;
+    background-size: 50%;
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    top: 0px;
+    width: 70%;
+    height: 70%;
+  }
+  90% {
+    opacity: 1.0;
+    background-size: 100%;
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+  100%  {
+    opacity: 0.0;
+    background-size: 100%;
+    -ms-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@keyframes team-first-blood {
+  0% {
+    background-color: rgba(255.0, 0, 0, 0.0);
+    -ms-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+  50% {
+    background-color: rgba(255.0, 0, 0, 0.5);
+    -ms-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+  100%  {
+    background-color: rgba(255.0, 0, 0, 1.0);
+    -ms-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+}
+
+
+/*
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
+  -ms-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite;
+}
+*/
